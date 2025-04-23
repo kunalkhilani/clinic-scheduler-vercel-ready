@@ -57,8 +57,12 @@ export default function FloorManagerDashboard() {
         <div className="xl:col-span-2 border rounded-2xl shadow p-4">
           <h2 className="text-xl font-semibold mb-2">Patient vs Procedure Grid</h2>
           <div className="flex items-center space-x-4 mb-4 text-sm">
-            <span className="flex items-center"><span className="w-4 h-4 bg-blue-100 border border-gray-300 mr-1"></span> Scheduled</span>
-            <span className="flex items-center"><span className="w-4 h-4 bg-green-200 border border-gray-300 mr-1"></span> Completed</span>
+            <span className="flex items-center">
+              <span className="w-4 h-4 bg-blue-100 border border-gray-300 mr-1"></span> Scheduled
+            </span>
+            <span className="flex items-center">
+              <span className="w-4 h-4 bg-green-200 border border-gray-300 mr-1"></span> Completed
+            </span>
           </div>
           <div className="overflow-x-auto">
             <table className="min-w-full border text-sm">
@@ -86,7 +90,7 @@ export default function FloorManagerDashboard() {
                       return (
                         <td
                           key={i}
-                          className={\`border px-2 py-1 text-center cursor-pointer \${cellStyle}\`}
+                          className={`border px-2 py-1 text-center cursor-pointer ${cellStyle}`}
                           onClick={() => toggleCompleted(patient.name, test)}
                         >
                           {timeSlot}
