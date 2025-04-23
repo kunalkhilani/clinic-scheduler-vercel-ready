@@ -75,7 +75,7 @@ export default function FloorManagerDashboard() {
                   <tr key={idx}>
                     <td className="border px-2 py-1 font-medium">{patient.name}</td>
                     {tests.map((test, i) => {
-                      const key = \`\${patient.name}-\${test}\`;
+                      const key = `${patient.name}-${test}`;
                       const isDone = completed[key];
                       const timeSlot = patient.schedule[test] || "-";
                       const cellStyle = isDone
