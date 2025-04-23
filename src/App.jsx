@@ -46,7 +46,7 @@ export default function FloorManagerDashboard() {
   }, []);
 
   const toggleCompleted = (patient, test) => {
-    const key = \`\${patient}-\${test}\`;
+    const key = `${patient}-${test}`;
     setCompleted((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
